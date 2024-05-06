@@ -2,10 +2,11 @@
 #include "Circlelines.h"
 #include "Grid.h"
 
+#include "debugFuncs.h"
+
 #include <iostream>
 #include<math.h>
 
-void print2dVector(const std::vector<std::vector<int>>& vec);
 
 int main()
 {   
@@ -14,7 +15,7 @@ int main()
     Grid g = Grid();
     g.initGrid(sf::Vector2i(10, 10));
     g.setCell(1, 2, CellType::Filled);
-    print2dVector(g.getGrid());
+    debf::print2dVector(g.getGrid());
 
  
     while (window.isOpen())
@@ -36,13 +37,4 @@ int main()
     }
 
     return 0;
-}
-
-void print2dVector(const std::vector<std::vector<int>>& vec) {
-    for (const auto& row : vec) {
-        for (int elem : row) {
-            std::cout << elem << " ";
-        }
-        std::cout << std::endl;
-    }
 }

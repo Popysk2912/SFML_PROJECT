@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\debugFuncs.cpp" />
     <ClCompile Include="src\Grid.cpp" />
     <ClCompile Include="src\Circlelines.cpp" />
     <ClCompile Include="src\Line.cpp" />
@@ -26,6 +27,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\CellTypes.h" />
+    <ClInclude Include="headers\debugFuncs.h" />
     <ClInclude Include="headers\Grid.h" />
     <ClInclude Include="headers\Circlelines.h" />
     <ClInclude Include="headers\Line.h" />
