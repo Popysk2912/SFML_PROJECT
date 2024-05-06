@@ -45,6 +45,12 @@ void Line::setEndColor(sf::Color c)
 	(*this)[1].color = c;
 }
 
+void Line::setColor(sf::Color c)
+{
+	(*this)[0].color = c;
+	(*this)[1].color = c;
+}
+
 
 /*|||||||||||||||||||||||||||||||||||||||||||||||||||||
 |||||||||||||||||||||LineOverride||||||||||||||||||||||
@@ -59,8 +65,8 @@ LineOverride::LineOverride(sf::Vertex start, float rad, float ang) :
 void LineOverride::recalculateLine()
 {
 	float angle_rad = degToRad(angle);
-	sf::Vertex end = sf::Vertex(sf::Vector2f((*this)[0].position.x + radius * sinf(angle_rad), (*this)[0].position.y + radius * cosf(angle_rad)));
-	(*this)[1] = end;
+	(*this)[1] = sf::Vertex(sf::Vector2f((*this)[0].position.x + radius * sinf(angle_rad),
+										 (*this)[0].position.y + radius * cosf(angle_rad)));
 }
 
 float LineOverride::getAngle()

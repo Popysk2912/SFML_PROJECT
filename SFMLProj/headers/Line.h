@@ -28,6 +28,7 @@ public:
 	void setEndPoint(sf::Vector2f p);
 	void setStartColor(sf::Color c);
 	void setEndColor(sf::Color c);
+	void setColor(sf::Color c);
 };
 
 /*|||||||||||||||||||||||||||||||||||||||||||||||||||||
