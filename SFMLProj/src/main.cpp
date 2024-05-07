@@ -11,10 +11,17 @@
 int main()
 {   
     sf::RenderWindow window(sf::VideoMode(640, 640), "SFML");
-    Circlelines circle = Circlelines();
+
     Grid g = Grid();
+    Circlelines circle = Circlelines(g.getGrid());
+
     g.initGrid(sf::Vector2i(10, 10));
     g.setCell(1, 2, CellType::Filled);
+    g.setCell(1, 3, CellType::Filled);
+    g.setCell(1, 4, CellType::Filled);
+    g.setCell(2, 5, CellType::Filled);
+    g.setCell(2, 6, CellType::Filled);
+
     debf::print2dVector(g.getGrid());
 
  
@@ -31,8 +38,10 @@ int main()
         circle.SetPos((sf::Vector2f)(sf::Mouse::getPosition(window)));
 
         window.clear(sf::Color(0, 0, 0));
+
         g.draw(window);
         circle.draw(window);
+
         window.display();
     }
 

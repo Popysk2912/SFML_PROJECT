@@ -44,7 +44,6 @@ void Line::setEndColor(sf::Color c)
 {
 	(*this)[1].color = c;
 }
-
 void Line::setColor(sf::Color c)
 {
 	(*this)[0].color = c;
@@ -55,10 +54,11 @@ void Line::setColor(sf::Color c)
 /*|||||||||||||||||||||||||||||||||||||||||||||||||||||
 |||||||||||||||||||||LineOverride||||||||||||||||||||||
 |||||||||||||||||||||||||||||||||||||||||||||||||||||*/
-LineOverride::LineOverride(sf::Vertex start, float rad, float ang) :
+LineOverride::LineOverride(sf::Vertex start, float rad, float ang, const std::vector<std::vector<int>>& gr) :
 	Line(start, start),
 	radius(rad),
-	angle(ang)
+	angle(ang),
+	grid(gr)
 {
 	this->recalculateLine();
 }
@@ -67,6 +67,10 @@ void LineOverride::recalculateLine()
 	float angle_rad = degToRad(angle);
 	(*this)[1] = sf::Vertex(sf::Vector2f((*this)[0].position.x + radius * sinf(angle_rad),
 										 (*this)[0].position.y + radius * cosf(angle_rad)));
+}
+void LineOverride::castRayOnGrid()
+{
+
 }
 
 float LineOverride::getAngle()

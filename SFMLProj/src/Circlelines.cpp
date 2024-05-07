@@ -1,13 +1,13 @@
 #include "Circlelines.h"
 #include <iostream>
 
-Circlelines::Circlelines()
+Circlelines::Circlelines(const std::vector<std::vector<int>>& grid)
 {
     radius = 250;
     sf::Vertex start = sf::Vertex(sf::Vector2f(0, 0), sf::Color(255, 255, 255));
     for (float i = 0.0f; i < 360.0f; i += 2.0f)
     {
-        lines.push_back(LineOverride(start, radius, i));
+        lines.push_back(LineOverride(start, radius, i, grid));
     }
 }
 
