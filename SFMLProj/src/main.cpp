@@ -4,6 +4,9 @@
 
 #include "debugFuncs.h"
 
+#include "Pointers.h"
+Grid* Pointers::grid_p = nullptr;
+
 #include <iostream>
 #include<math.h>
 
@@ -16,11 +19,8 @@ int main()
     Circlelines circle = Circlelines();
 
     g.initGrid(sf::Vector2i(10, 10));
-    g.setCell(1, 2, CellType::Filled);
-    g.setCell(1, 3, CellType::Filled);
-    g.setCell(1, 4, CellType::Filled);
-    g.setCell(2, 5, CellType::Filled);
-    g.setCell(2, 6, CellType::Filled);
+    
+    Pointers::setGridPointer(&g);
 
     debf::print2dVector(g.getGrid());
 
@@ -36,7 +36,7 @@ int main()
 
 
         circle.SetPos((sf::Vector2f)(sf::Mouse::getPosition(window)));
-
+        circle.update();
         window.clear(sf::Color(0, 0, 0));
 
         g.draw(window);

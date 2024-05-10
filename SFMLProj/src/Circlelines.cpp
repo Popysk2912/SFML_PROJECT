@@ -22,6 +22,10 @@ void Circlelines::draw(sf::RenderWindow& window)
 }
 void Circlelines::update()
 {
+    for (int i = 0; i < lines.size(); i++)
+    {
+        lines[i].update();
+    }
     
 }
 

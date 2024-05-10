@@ -1,9 +1,14 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 
+#include "Pointers.h"
+
+
 #define M_PI 3.14159265359f
 #define degToRad(angleInDegrees) ((angleInDegrees) * M_PI / 180.0f)
 #define radToDeg(angleInRadians) ((angleInRadians) * 180.0f / M_PI)
+
+
 /*|||||||||||||||||||||||||||||||||||||||||||||||||||||
 |||||||||||||||||||||LineClass|||||||||||||||||||||||||
 |||||||||||||||||||||||||||||||||||||||||||||||||||||*/

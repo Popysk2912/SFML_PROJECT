@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Pointers.cpp" />
     <ClCompile Include="src\debugFuncs.cpp" />
     <ClCompile Include="src\Grid.cpp" />
     <ClCompile Include="src\Circlelines.cpp" />
@@ -31,6 +32,7 @@
     <ClInclude Include="headers\Grid.h" />
     <ClInclude Include="headers\Circlelines.h" />
     <ClInclude Include="headers\Line.h" />
+    <ClInclude Include="headers\Pointers.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

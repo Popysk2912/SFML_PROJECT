@@ -69,6 +69,8 @@ void LineOverride::recalculateLine()
 }
 void LineOverride::castRayOnGrid()
 {
+	Grid* grid = Pointers::getGridPointer();
+	grid->setCell(1, 1, 10);
 
 }
 
