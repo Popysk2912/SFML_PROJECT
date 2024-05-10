@@ -54,11 +54,10 @@ void Line::setColor(sf::Color c)
 /*|||||||||||||||||||||||||||||||||||||||||||||||||||||
 |||||||||||||||||||||LineOverride||||||||||||||||||||||
 |||||||||||||||||||||||||||||||||||||||||||||||||||||*/
-LineOverride::LineOverride(sf::Vertex start, float rad, float ang, const std::vector<std::vector<int>>& gr) :
+LineOverride::LineOverride(sf::Vertex start, float rad, float ang) :
 	Line(start, start),
 	radius(rad),
-	angle(ang),
-	grid(gr)
+	angle(ang)
 {
 	this->recalculateLine();
 }

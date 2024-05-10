@@ -16,7 +16,7 @@ private:
 	
 
 public:
-	Circlelines(const std::vector<std::vector<int>>& grid);
+	Circlelines();
 	void printpos();
 
 	void draw(sf::RenderWindow& window);

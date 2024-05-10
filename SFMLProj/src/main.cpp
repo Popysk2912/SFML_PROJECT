@@ -13,7 +13,7 @@ int main()
     sf::RenderWindow window(sf::VideoMode(640, 640), "SFML");
 
     Grid g = Grid();
-    Circlelines circle = Circlelines(g.getGrid());
+    Circlelines circle = Circlelines();
 
     g.initGrid(sf::Vector2i(10, 10));
     g.setCell(1, 2, CellType::Filled);

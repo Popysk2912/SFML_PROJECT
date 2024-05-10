@@ -39,13 +39,12 @@ class LineOverride : public Line
 private: 
 	float angle;
 	float radius;
-    const std::vector<std::vector<int>>& grid;
 
 	void recalculateLine();
 	void castRayOnGrid();
 
 public:
-	LineOverride(sf::Vertex start, float rad, float ang, const std::vector<std::vector<int>>& gr);
+	LineOverride(sf::Vertex start, float rad, float ang);
 
 	void update()
 	{
