@@ -5,9 +5,9 @@ Circlelines::Circlelines()
 {
     radius = 250;
     sf::Vertex start = sf::Vertex(sf::Vector2f(0, 0), sf::Color(255, 255, 255));
-    for (float i = 0.0f; i < 360.0f; i += 2.0f)
+    for (float i = -30.0f; i <= 30.0f; i += 30.0f)
     {
-        lines.push_back(LineOverride(start, radius, i));
+        lines.push_back(LineOverride(start, radius, i + 90));
     }
 }
 
