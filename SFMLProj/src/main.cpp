@@ -2,31 +2,25 @@
 #include "Circlelines.h"
 #include "Grid.h"
 
-
 #include "debugFuncs.h"
 
 #include "Pointers.h"
+#include "DrawBatch.h"
 
-#include <iostream>
-#include <vector>
-#include<math.h>
 
 
 int main()
 {   
     sf::RenderWindow window(sf::VideoMode(640, 640), "SFML");
     Pointers::setWindowPointer(&window);
+    DrawBatch::initLayers(10);
 
-    Grid g = Grid();
+    Grid g = Grid();    
+    g.initGrid(sf::Vector2i(10, 10));
     Pointers::setGridPointer(&g);
 
     Circlelines circle = Circlelines();
-
-    g.initGrid(sf::Vector2i(10, 10));    
-
-
-    debf::print2dVector(g.getGrid());
-
+    
  
     while (window.isOpen())
     {
@@ -37,11 +31,15 @@ int main()
                 window.close();
         }
 
-
-        circle.SetPos((sf::Vector2f)(sf::Mouse::getPosition(window)));
+        window.clear();
+        circle.SetPos((sf::Vector2f)sf::Mouse::getPosition(window));
         circle.update();
-        window.clear(sf::Color(0, 0, 0));
 
+        circle.draw(DrawBatch::getLayer(2));
+        g.draw(DrawBatch::getLayer(0));
+
+
+        DrawBatch::draw(window);
         window.display();
     }
 

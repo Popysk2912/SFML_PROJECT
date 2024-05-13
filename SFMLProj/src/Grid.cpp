@@ -29,8 +29,9 @@ void Grid::initGrid(sf::Vector2i size)
 		}
 	}
 }
-void Grid::draw(sf::RenderWindow& window)
+void Grid::draw(sf::RenderTexture* layer)
 {
+	layer->clear(sf::Color::Transparent);
 	sf::Color color;
 	for (int x = 0; x < size_x; x++)
 	{
@@ -47,7 +48,7 @@ void Grid::draw(sf::RenderWindow& window)
 				color = sf::Color(55, 55, 55);
 			}
 			rect.setFillColor(color);
-			window.draw(rect);
+			layer->draw(rect);
 		}
 	}
 }

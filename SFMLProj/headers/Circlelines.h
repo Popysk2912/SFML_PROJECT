@@ -19,7 +19,7 @@ public:
 	Circlelines();
 	void printpos();
 
-	void draw(sf::RenderWindow& window);
+	void draw(sf::RenderTexture* layer);
 	void update();
 
 	void SetPos(sf::Vector2f pos);

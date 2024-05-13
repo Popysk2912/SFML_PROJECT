@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\DrawBatch.cpp" />
     <ClCompile Include="src\Pointers.cpp" />
     <ClCompile Include="src\debugFuncs.cpp" />
     <ClCompile Include="src\Grid.cpp" />
@@ -27,6 +28,7 @@
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="headers\DrawBatch.h" />
     <ClInclude Include="headers\CellTypes.h" />
     <ClInclude Include="headers\debugFuncs.h" />
     <ClInclude Include="headers\Grid.h" />

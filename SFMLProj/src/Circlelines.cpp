@@ -11,14 +11,15 @@ Circlelines::Circlelines()
     }
 }
 
-void Circlelines::draw(sf::RenderWindow& window)
+void Circlelines::draw(sf::RenderTexture* layer)
 {
+    layer->clear(sf::Color::Transparent);
     for (Line l : lines)
     {
         l.setColor(sf::Color(255, 100, 100));
-        window.draw(l);
+        layer->draw(l);
     }
-    window.draw(this->getLastVerticies());
+    layer->draw(this->getLastVerticies());
 }
 void Circlelines::update()
 {

@@ -17,7 +17,7 @@ public:
 	Grid();
 
 	void initGrid(sf::Vector2i size);
-	void draw(sf::RenderWindow& window);
+	void draw(sf::RenderTexture* layer);
 
 	std::vector<std::vector<int>> getGrid();
 	int getCell(int x, int y);
