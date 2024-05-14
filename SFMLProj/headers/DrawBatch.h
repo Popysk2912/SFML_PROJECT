@@ -13,5 +13,6 @@ public:
 	static sf::RenderTexture* getLayer(unsigned int index);
 	static void initLayers(unsigned int layersNum);
 	static void draw(sf::RenderWindow& window);
+	static void clearLayers();
 };
 

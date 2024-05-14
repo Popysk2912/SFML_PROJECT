@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "Pointers.h"
+#include "DrawBatch.h"
 
 
 #define M_PI 3.14159265359f

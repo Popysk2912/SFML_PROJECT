@@ -69,7 +69,16 @@ void LineOverride::recalculateLine()
 }
 void LineOverride::castRayOnGrid()
 {
+	Grid* grid = Pointers::getGridPointer();
 
+	sf::RectangleShape rect(sf::Vector2f(grid->cell_size-1, grid->cell_size-1));
+	rect.setFillColor(sf::Color(255, 70, 70, 125));
+	sf::Vector2f pos = sf::Vector2f(this->getStartPoint().x , this->getStartPoint().y);
+	rect.setPosition(pos);
+
+	sf::RenderTexture* layer = DrawBatch::getLayer(1);
+	layer->clear(sf::Color::Transparent);
+	layer->draw(rect);
 }
 
 float LineOverride::getAngle()

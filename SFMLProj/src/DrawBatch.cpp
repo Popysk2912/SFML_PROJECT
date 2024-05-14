@@ -22,8 +22,18 @@ void DrawBatch::draw(sf::RenderWindow& window)
 {
 	for (int i = 0; i < layers.size(); i++)
 	{
-		layers[i]->display();
+		layers[i]->display();	
 		sf::Sprite sprite(layers[i]->getTexture());
 		window.draw(sprite);
 	}
 }
+
+void DrawBatch::clearLayers()
+{
+	for (int i = 0; i < layers.size(); i++)
+	{
+		delete layers[i];
+	}
+}
+
+

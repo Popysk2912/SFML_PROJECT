@@ -7,6 +7,13 @@
 #include "Pointers.h"
 #include "DrawBatch.h"
 
+#include <iostream>
+
+#define gridLayer 0
+#define playerLayer 2
+#define layoutLayer 1
+
+
 
 
 int main()
@@ -20,7 +27,6 @@ int main()
     Pointers::setGridPointer(&g);
 
     Circlelines circle = Circlelines();
-    
  
     while (window.isOpen())
     {
@@ -35,13 +41,12 @@ int main()
         circle.SetPos((sf::Vector2f)sf::Mouse::getPosition(window));
         circle.update();
 
-        circle.draw(DrawBatch::getLayer(2));
-        g.draw(DrawBatch::getLayer(0));
-
+        circle.draw(DrawBatch::getLayer(playerLayer));
+        g.draw(DrawBatch::getLayer(gridLayer));
 
         DrawBatch::draw(window);
         window.display();
     }
-
+    DrawBatch::clearLayers();
     return 0;
 }
