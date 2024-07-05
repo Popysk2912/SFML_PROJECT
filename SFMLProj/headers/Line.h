@@ -36,31 +36,3 @@ public:
 	void setEndColor(sf::Color c);
 	void setColor(sf::Color c);
 };
-
-/*|||||||||||||||||||||||||||||||||||||||||||||||||||||
-|||||||||||||||||||||LineOverride||||||||||||||||||||||
-|||||||||||||||||||||||||||||||||||||||||||||||||||||*/
-class LineOverride : public Line
-{
-private: 
-	float angle;
-	float radius;
-
-	void recalculateLine();
-	void castRayOnGrid();
-
-public:
-	LineOverride(sf::Vertex start, float rad, float ang);
-
-	void update()
-	{
-		this->recalculateLine();
-		this->castRayOnGrid();
-	}
-
-	float getAngle();
-
-	void setStartPoint(sf::Vector2f p);
-	void setAngle(float a);
-	void setRadius(float r);
-};

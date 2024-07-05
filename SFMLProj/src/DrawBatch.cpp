@@ -28,7 +28,7 @@ void DrawBatch::draw(sf::RenderWindow& window)
 	}
 }
 
-void DrawBatch::clearLayers()
+void DrawBatch::deleteLayers()
 {
 	for (int i = 0; i < layers.size(); i++)
 	{
