@@ -1,9 +1,8 @@
-#pragma once
-#include <vector>
-#include <iostream>
-
 #ifndef DEBF_H
 #define DEBF_H
+
+#include <vector>
+#include <iostream>
 
 namespace debf
 {
